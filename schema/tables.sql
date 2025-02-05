@@ -5,8 +5,8 @@ DROP TABLE IF EXISTS `xhs_creator`;
 CREATE TABLE `xhs_creator`
 (
     `id`             bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `gmt_create`     datatime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-    `gmt_modified`   datatime NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP COMMENT '修改时间',
+    `gmt_create`     datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `gmt_modified`   datetime NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP COMMENT '修改时间',
     `user_id`        varchar(64) NOT NULL COMMENT '用户ID',
     `nickname`       varchar(64)  DEFAULT NULL COMMENT '用户昵称',
     `avatar`         varchar(255) DEFAULT NULL COMMENT '用户头像地址',
@@ -29,8 +29,8 @@ DROP TABLE IF EXISTS `xhs_note`;
 CREATE TABLE `xhs_note`
 (
     `id`              bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `gmt_create`      datatime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-    `gmt_modified`    datatime NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP COMMENT '修改时间',
+    `gmt_create`      datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `gmt_modified`    datetime NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP COMMENT '修改时间',
     `user_id`          varchar(64) NOT NULL COMMENT '用户ID',
     `nickname`         varchar(64)  DEFAULT NULL COMMENT '用户昵称',
     `avatar`           varchar(255) DEFAULT NULL COMMENT '用户头像地址',
@@ -63,8 +63,8 @@ DROP TABLE IF EXISTS `xhs_note_comment`;
 CREATE TABLE `xhs_note_comment`
 (
     `id`             bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `gmt_create`     datatime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-    `gmt_modified`   datatime NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP COMMENT '修改时间',
+    `gmt_create`     datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `gmt_modified`   datetime NOT NULL DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP COMMENT '修改时间',
     `user_id`           varchar(64) NOT NULL COMMENT '用户ID',
     `nickname`          varchar(64)  DEFAULT NULL COMMENT '用户昵称',
     `avatar`            varchar(255) DEFAULT NULL COMMENT '用户头像地址',
