@@ -88,6 +88,9 @@ CREATE TABLE `xhs_note_comment`
 ALTER TABLE `xhs_note_comment`
     ADD COLUMN `parent_comment_id` VARCHAR(64) DEFAULT NULL COMMENT '父评论ID';
 
+ALTER TABLE `xhs_note_comment`
+    ADD COLUMN `like_count` VARCHAR(64) DEFAULT NULL COMMENT '评论点赞数量';
+
 -- 增加搜索来源关键字字段
 alter table xhs_note
     add column `source_keyword` varchar(255) default '' comment '搜索来源关键字';

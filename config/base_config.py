@@ -11,7 +11,7 @@
 
 # 基础配置
 PLATFORM = "xhs"
-KEYWORDS = "编程"  # 关键词搜索配置，以英文逗号分隔
+KEYWORDS = "金铲铲阵容推荐"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
@@ -47,7 +47,7 @@ HEADLESS = False
 SAVE_LOGIN_STATE = True
 
 # 数据保存类型选项配置,支持三种类型：csv、db、json, 最好保存到DB，有排重的功能。
-SAVE_DATA_OPTION = "json"  # csv or db or json
+SAVE_DATA_OPTION = "db"  # csv or db or json
 
 # 用户浏览器缓存的浏览器文件配置
 USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
