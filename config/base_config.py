@@ -11,11 +11,12 @@
 
 # 基础配置
 PLATFORM = "xhs"
-KEYWORDS = "编程副业,编程兼职"  # 关键词搜索配置，以英文逗号分隔
+KEYWORDS = "金铲铲阵容推荐"  # 关键词搜索配置，以英文逗号分隔
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
-SORT_TYPE = "popularity_descending"
+# SORT_TYPE = "popularity_descending"
+SORT_TYPE = "general"
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持抖音
 PUBLISH_TIME_TYPE = 0
 CRAWLER_TYPE = (
@@ -55,7 +56,7 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 200
+CRAWLER_MAX_NOTES_COUNT = 5
 
 # 爬取开始的天数，仅支持 bilibili 关键字搜索，YYYY-MM-DD 格式，若为 None 则表示不设置时间范围，按照默认关键字最多返回 1000 条视频的结果处理
 START_DAY = '2024-01-01'
@@ -81,7 +82,7 @@ ENABLE_GET_COMMENTS = True
 CRAWLER_MAX_COMMENTS_COUNT_SINGLENOTES = 10
 
 # 是否开启爬二级评论模式, 默认不开启爬二级评论
-# 老版本项目使用了 db, 则需参考 schema/tables.sql line 287 增加表字段
+# 老版本项目使用了 db, 则需参考 schema/tables.sql.bak line 287 增加表字段
 ENABLE_GET_SUB_COMMENTS = False
 
 # 已废弃⚠️⚠️⚠️指定小红书需要爬虫的笔记ID列表
